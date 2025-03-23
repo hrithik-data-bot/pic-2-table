@@ -1,0 +1,20 @@
+name: pic-2-table
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10.6
+  - pandas
+  - pydantic
+  - fastapi
+  - typer
+  - uvicorn
+  - requests
+  - python-dotenv
+  - autopep8
+  - pylint
+  - pytest
+  - pytest-cov
+  - mypy
