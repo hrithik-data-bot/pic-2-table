@@ -1,5 +1,0 @@
-
-[run]
-data_file = build/coverage
-[report]
-omit = tests/*
