@@ -7,6 +7,11 @@ channels:
 dependencies:
   - python=3.10.6
   - pandas
+  - matplotlib
+  - seaborn
+  - transformers
+  - pytorch
+  - huggingface_hub
   - python-dotenv
   - autopep8
   - pylint
