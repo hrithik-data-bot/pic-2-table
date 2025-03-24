@@ -10,8 +10,13 @@ dependencies:
   - matplotlib
   - seaborn
   - transformers
-  - pytorch
   - huggingface_hub
   - python-dotenv
   - autopep8
   - pylint
+  - pip
+  - pip:
+      - timm
+      - torch 
+      - torchvision 
+      - torchaudio
