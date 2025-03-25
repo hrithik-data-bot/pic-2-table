@@ -35,11 +35,4 @@ class DetectTable:
             )
 
         return detected_boxes
-    
-    
 
-# if __name__ == "__main__":
-#     file_path = hf_hub_download(repo_id="nielsr/example-pdf", repo_type="dataset", filename="example_pdf.png")
-#     image = Image.open(file_path).convert("RGB")
-#     detector = DetectTable(image)
-#     print(detector.detect_table())
