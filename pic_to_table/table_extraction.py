@@ -1,7 +1,7 @@
 """Module for table extraction."""
 
 from transformers import AutoImageProcessor, TableTransformerForObjectDetection
-from PIL import Image
+from PIL import Image, ImageDraw
 from huggingface_hub import hf_hub_download
 import torch
 
@@ -36,3 +36,17 @@ class DetectTable:
 
         return detected_boxes
 
+    def visualize_image(self):
+        """visualize the detected table"""
+
+        boxes = self.detect_table()
+        if len(boxes) == 1:
+            draw = ImageDraw.Draw(self.input_image)
+            draw.rectangle(boxes[0], outline="red", width=1)
+            return self.input_image
+
+if __name__ == "__main__":
+    file_path = hf_hub_download(repo_id="nielsr/example-pdf", repo_type="dataset", filename="example_pdf.png")
+    image = Image.open(file_path).convert("RGB")
+    obj = DetectTable(image)
+    obj.visualize_image().save('xyz.png')
