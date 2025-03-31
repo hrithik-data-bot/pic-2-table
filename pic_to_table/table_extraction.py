@@ -1,6 +1,7 @@
 """Module for table extraction."""
 
 from transformers import AutoImageProcessor, TableTransformerForObjectDetection
+from PIL import ImageDraw
 import torch
 
 MODEL_STRING = "microsoft/table-transformer-detection"
