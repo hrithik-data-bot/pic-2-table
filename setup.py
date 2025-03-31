@@ -1,10 +1,10 @@
 """
-Once the project is set-up, run the following command on the console
+Once the project is set up, run the following command on the console
 to make use of the entry-points:
 >>> pip install -e .
 
-This will enable user to run the module from the command line
-following way:
+This will enable the user to run the module from the command line
+as follows:
 >>> xyz
 """
 
@@ -14,25 +14,36 @@ following way:
 from setuptools import find_packages, setup
 import versioneer
 
-
 requirements = [
-    # package requirements (other than Python) go here
-    # add required dependencies that are also specified in conda.yaml
-
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "transformers",
+    "huggingface_hub",
+    "python-dotenv",
+    "autopep8",
+    "pylint",
+    "timm",
+    "torch",
+    "torchvision",
+    "torchaudio"
 ]
 
 setup(
-    name='xyz',
+    name="pic-2-table",
     version=versioneer.get_version(),
-    packages=find_packages(where='.', exclude=['tests', 'tests.*']),
+    packages=find_packages(where=".", exclude=["tests", "tests.*"]),
     install_requires=requirements,
-    keywords='xyz',
+    python_requires=">=3.10.6",
+    keywords="table-extraction",
     classifiers=[
-        'Programming Language :: Python :: 3.10.6',
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.10",
+        "Operating System :: OS Independent",
     ],
     entry_points={
-        'console_scripts': [
-            'xyz = pic_to_table.cli:main'
+        "console_scripts": [
+            "xyz = pic_to_table.cli:main"
         ]
     }
 )
