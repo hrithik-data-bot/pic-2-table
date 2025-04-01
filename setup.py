@@ -12,29 +12,31 @@ as follows:
 # pylint: skip-file
 
 from setuptools import find_packages, setup
-import versioneer
+
+# Define the package version manually
+PACKAGE_VERSION = "0.1.0"
 
 requirements = [
-    "pandas",
-    "matplotlib",
-    "seaborn",
-    "transformers",
-    "huggingface_hub",
-    "python-dotenv",
-    "autopep8",
-    "pylint",
-    "timm",
-    "torch",
-    "torchvision",
-    "torchaudio"
+    "pandas==1.3.3",
+    "matplotlib==3.4.3",
+    "seaborn==0.11.2",
+    "transformers==4.30.2",
+    "huggingface_hub==0.14.1",
+    "python-dotenv==1.0.0",
+    "autopep8==1.6.0",
+    "pylint==2.14.5",
+    "timm==0.6.12",
+    "torch==2.0.1",
+    "torchvision==0.15.2",
+    "torchaudio==2.0.2"
 ]
 
 setup(
-    name="pic-2-table",
-    version=versioneer.get_version(),
+    name="pic-2-table",   # Package name
+    version=PACKAGE_VERSION,  # Set package version manually
     packages=find_packages(where=".", exclude=["tests", "tests.*"]),
     install_requires=requirements,
-    python_requires=">=3.10.6",
+    python_requires="==3.10.6",  # Ensuring only Python 3.10.6 is used
     keywords="table-extraction",
     classifiers=[
         "Programming Language :: Python :: 3",
