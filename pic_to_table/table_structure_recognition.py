@@ -1,6 +1,5 @@
 """Module for table structure recognition."""
 
-
 from transformers import AutoImageProcessor, TableTransformerForObjectDetection
 from PIL import ImageDraw
 import torch
