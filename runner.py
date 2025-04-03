@@ -28,5 +28,3 @@ if __name__ == "__main__":
     draw = ImageDraw.Draw(cropped_table)
     for box in columns:
         draw.rectangle(box, outline="red", width=1)
-    cropped_table.save('xyz.png')
-
